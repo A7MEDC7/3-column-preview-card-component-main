@@ -1,0 +1,205 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500&display=swap");
+
+/* Colors */
+:root {
+  /* Primary */
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  /* Neutral */
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* Global rules start*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: var(--Very-light-gray);
+}
+/* Global rules end */
+/* Cards styling start*/
+.card-1 {
+  background-color: var(--Bright-orange);
+  padding: 20px;
+  height: 400px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.card-2 {
+  background-color: var(--Dark-cyan);
+  padding: 20px;
+  height: 400px;
+}
+
+.card-3 {
+  background-color: var(--Very-dark-cyan);
+  padding: 20px;
+  height: 400px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/* Cards styling end*/
+/* Logo styling start */
+.logo-1 {
+  margin: 20px auto;
+}
+
+.logo-2 {
+  margin: 20px auto;
+}
+
+.logo-3 {
+  margin: 20px auto;
+}
+/* Logo styling end */
+/* Title styling start */
+.title {
+  margin: 20px auto;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+  color: var(--Very-light-gray);
+  font-weight: 400;
+}
+/* Title styling end */
+/* Paragraph styling start */
+.card-content {
+  margin: 20px auto;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--Transparent-white);
+  font-weight: 300;
+  text-transform: math-auto;
+}
+/* Paragraph styling end */
+/* Button styling start */
+.btn {
+  margin: 60px auto;
+}
+
+.card-1 .btn button {
+  padding: 15px;
+  width: 200px;
+  border: none;
+  border-radius: 50px;
+  color: var(--Bright-orange);
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.card-1 .btn button:hover {
+  color: var(--Very-light-gray);
+  background-color: transparent;
+  border: 3px solid var(--Very-light-gray);
+}
+
+.card-2 .btn button {
+  padding: 15px;
+  width: 200px;
+  border: none;
+  border-radius: 50px;
+  color: var(--Dark-cyan);
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.card-2 .btn button:hover {
+  color: var(--Very-light-gray);
+  background-color: transparent;
+  border: 3px solid var(--Very-light-gray);
+}
+
+.card-3 .btn button {
+  padding: 15px;
+  width: 200px;
+  border: none;
+  border-radius: 50px;
+  color: var(--Very-dark-cyan);
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.card-3 .btn button:hover {
+  color: var(--Very-light-gray);
+  background-color: transparent;
+  border: 3px solid var(--Very-light-gray);
+}
+/* Button styling end */
+/* Responsive grid */
+.auto-grid {
+  --auto-grid-min-size: 16rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  justify-content: center;
+}
+/* footer start*/
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--Very-light-gray);
+  text-align: center;
+  padding: 10px;
+  font-size: 0.75rem;
+  line-height: 20px;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--Very-dark-cyan);
+  font-weight: bold;
+}
+
+.attribution a:hover {
+  color: var(--Bright-orange);
+}
+/* footer end*/
+/* Media query */
+@media only screen and (max-width: 375px) {
+  body {
+    padding: 20px;
+  }
+
+  .card-1,
+  .card-2,
+  .card-3 {
+    height: auto;
+  }
+  .card-1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  .card-3 {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .btn button {
+    width: 100%;
+  }
+}
